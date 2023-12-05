@@ -1,0 +1,198 @@
+[
+	{
+		"id": "9ff696f1-1875-4670-8525-7e1844e91884",
+		"title": "garrapiñada",
+		"description": "garrapiñada de las mejores",
+		"price": 2,
+		"thumbnail": "https://www.google.com",
+		"code": "9999902",
+		"stock": 234,
+		"status": true,
+		"category": "Dulces"
+	},
+	{
+		"id": "d9f319ae-3aae-47a2-bf17-76c352c075aa",
+		"title": "lechuga",
+		"description": "lechuga de la mejor",
+		"price": 5,
+		"thumbnail": "https://www.google.com",
+		"code": "8833212",
+		"stock": 67,
+		"status": true,
+		"category": "Verduras"
+	},
+	{
+		"id": "b11f3285-332d-4d7c-b99c-3a2c982c2bd2",
+		"title": "pan",
+		"description": "pan del mejor",
+		"price": 2,
+		"thumbnail": "https://www.google.com",
+		"code": "1673212",
+		"stock": 8,
+		"status": true,
+		"category": "Panadería"
+	},
+	{
+		"id": "cf8137a7-af9c-4765-849b-4e18f8717e64",
+		"title": "lentejas",
+		"description": "lentejas de las mejores",
+		"price": 9,
+		"thumbnail": "https://www.google.com",
+		"code": "1136412",
+		"stock": 56,
+		"status": true,
+		"category": "Legumbres"
+	},
+	{
+		"id": "4db4e9f0-d399-4d41-a25b-bc9ad9839461",
+		"title": "roquefort",
+		"description": "roquefort del mejor",
+		"price": 555,
+		"thumbnail": "https://www.google.com",
+		"code": "1233292",
+		"stock": 6,
+		"status": true,
+		"category": "Quesos"
+	},
+	{
+		"id": "17b3a87e-c61a-4ca1-a85b-4973cfc27b16",
+		"title": "mandarina",
+		"description": "mandarinas de las mejores",
+		"price": 25,
+		"thumbnail": "https://www.google.com",
+		"code": "1133226",
+		"stock": 4,
+		"status": true,
+		"category": "Frutas"
+	},
+	{
+		"id": "e1fffd94-1971-4972-a91e-a7a32b8f33cc",
+		"title": "Salames",
+		"description": "werqerqerd",
+		"price": 330,
+		"thumbnail": "https://ejemplo.com/imagen.jpg",
+		"code": "P12345",
+		"stock": 30,
+		"status": true,
+		"category": "Embutidos"
+	},
+	{
+		"id": "1a0dc3bb-0ba6-4fcb-835a-bd16a62f7d3d",
+		"title": "rabanito",
+		"description": "rabanito de la mejor",
+		"price": 5,
+		"thumbnail": "https://www.google.com",
+		"code": "8233212",
+		"stock": 7,
+		"status": true,
+		"category": "Verduras"
+	},
+	{
+		"id": "88aece07-d45d-4834-a13f-e28504ba8f22",
+		"title": "mango",
+		"description": "mango de las mejores",
+		"price": 25,
+		"thumbnail": "https://www.google.com",
+		"code": "1133299",
+		"stock": 4,
+		"status": true,
+		"category": "Frutas"
+	},
+	{
+		"id": "749b6603-2210-44d8-adc6-255f98c81fa3",
+		"title": "pasas",
+		"description": "pasas de las mejores",
+		"price": 25,
+		"thumbnail": "https://www.google.com",
+		"code": "1133242",
+		"stock": 4,
+		"status": true,
+		"category": "Frutas secas"
+	},
+	{
+		"id": "8774620e-d68e-4660-8468-a6565db7db9a",
+		"title": "damascos",
+		"description": "damsacos de las mejores",
+		"code": "0133242",
+		"price": 25,
+		"status": true,
+		"stock": 410,
+		"category": "Frutas",
+		"thumbnail": "https://www.google.com"
+	},
+	{
+		"id": "86775617-c68a-49ea-8aeb-b3f129987335",
+		"title": "ciruelas",
+		"description": "ciruelas de las mejores",
+		"code": "0033242",
+		"price": 25,
+		"status": true,
+		"stock": 40,
+		"category": "Frutas"
+	},
+	{
+		"id": "225c5af0-63c3-4b34-904b-29bbf40a7efa",
+		"title": "frutillas",
+		"description": "frutillas del mejor",
+		"code": "12430992",
+		"price": 2,
+		"status": true,
+		"stock": 8,
+		"category": "Frutas",
+		"thumbnail": "https://www.google.com"
+	},
+	{
+		"id": "39056e37-a008-402f-a8ff-749f93b61e42",
+		"title": "frambuesas",
+		"description": "frambuesas del mejor",
+		"code": "12439992",
+		"price": 2,
+		"status": true,
+		"stock": 8,
+		"category": "Frutas"
+	},
+	{
+		"id": "186d0206-f261-49e5-9023-b95dac3a37e8",
+		"title": "lechuga",
+		"description": "morriones del mejor",
+		"code": "12433292",
+		"price": 2,
+		"status": true,
+		"stock": 8,
+		"category": "Verduras",
+		"thumbnail": "https://www.google.com"
+	},
+	{
+		"id": "c7a9ff21-f5ed-4634-bc11-752f9818566d",
+		"title": "Sandía",
+		"description": "Sandía deliciosa",
+		"code": "20202020",
+		"price": "15",
+		"status": true,
+		"stock": "23",
+		"category": "frutas",
+		"thumbnail": []
+	},
+	{
+		"id": "9d1a69ea-6b2e-4bbd-bcda-1490e69a393e",
+		"title": "Mango",
+		"description": "Mango delmejor",
+		"code": "20202021",
+		"price": "12",
+		"status": true,
+		"stock": "4",
+		"category": "frutas",
+		"thumbnail": []
+	},
+	{
+		"id": "f2a38f68-7783-4f13-9f25-a8fc413c4998",
+		"title": "Sandias",
+		"description": "las mejores de universo entero",
+		"code": "2323232323",
+		"price": "28",
+		"status": true,
+		"stock": "1000",
+		"category": "frutas",
+		"thumbnail": []
+	}
+]

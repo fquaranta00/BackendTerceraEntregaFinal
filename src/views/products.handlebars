@@ -1,0 +1,27 @@
+<div>
+  <p>{{welcomeMessage}}</p>
+  <h2>
+    Listado de productos
+  </h2>
+</div>
+
+<div id="product-list">
+  {{#each payload}}
+    <div class="product">
+      <h2>{{this.title}}</h2>
+      <p>{{this.description}}</p>
+      <p>id: {{this._id}}</p>
+      <p>Código: {{this.code}}</p>
+      <p>Precio: {{this.price}}</p>
+      <p>Stock: {{this.stock}}</p>
+      <p>Categoría: {{this.category}}</p>
+      <p>Thumbnail: {{this.thumbnail}}</p>
+    </div>
+  {{/each}}
+</div>
+
+<p>Pagina actual: {{page}}</p>
+<a href="{{prevLink}}" role="button" {{#unless hasPrevPage}} disabled{{/unless}}>Anterior</a>
+<a href="{{nextLink}}" role="button" {{#unless hasNextPage}} disabled{{/unless}}>Siguiente</a>
+
+<script src="/socket.io/socket.io.js"></script>

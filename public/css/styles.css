@@ -1,0 +1,60 @@
+/* Estilos para el formulario */
+#product-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #000; /* Cambiando el fondo a negro */
+  border: 1px solid #ccc; /* Cambiando el color del borde */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label, input, button {
+  margin-bottom: 10px;
+}
+
+input, button {
+  width: 100%;
+  padding: 8px;
+  background-color: #fff; /* Cambiando el fondo de los inputs y botones a blanco */
+  border: 1px solid #ccc; /* Añadiendo un borde a los inputs y botones */
+}
+
+button {
+  background-color: #ffae00;
+  color: #ffadf5;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Estilos para la lista de productos */
+.product {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #312c2c; /* Cambiando el fondo de los productos a blanco */
+}
+
+.product h2 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.product p {
+  margin: 0;
+}
+
+/* Estilos para el botón de eliminar */
+#delete-product {
+  background-color: #ff0000; /* Cambiando el color del botón de eliminar a rojo */
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#delete-product:hover {
+  background-color: #cc0000; /* Cambiando el color al pasar el mouse sobre el botón de eliminar */
+}
