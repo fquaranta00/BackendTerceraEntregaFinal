@@ -3,6 +3,9 @@ import { fileURLToPath } from 'url';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 
+// console.log('Librería jsonwebtoken importada correctamente:', jwt);
+
+
 const __filename = fileURLToPath(import.meta.url);
 
 export const __dirname = path.dirname(__filename);
@@ -42,12 +45,12 @@ export const tokenGenerator = (user) => {
     email,
     role,
   };
-  return jwt.sign(payload, JWT_SECRET, { expiresIn: '1m' });
+  return jwt.sign(payload, JWT_SECRET, { expiresIn: '10m' });
 }
 
 export const verifyToken = (token) => {
   return new Promise((resolve, reject) => {
-    JWT.verify(token, JWT_SECRET, (error, payload) => {
+    jwt.verify(token, JWT_SECRET, (error, payload) => {
       if (error) { 
         return reject(error)
       }
@@ -56,19 +59,19 @@ export const verifyToken = (token) => {
   });
 }
 
-// export const jwtAuth = (req, res, next) => {
-//   const { authorization: token } = req.headers;
-//   if (!token) {
-//     return res.status(401).json({ message: 'unauthorized' });
-//   }
-//   jwt.verify(token, JWT_SECRET, async (error, payload) => {
-//     if (error) {
-//       return res.status(403).json({ message: 'No authorized' });
-//     }
-//     req.user = await UserModel.findById(payload.id);
-//     next();
-//   });
-// }
+export const jwtAuth = (req, res, next) => {
+  const token = req.signedCookies.access_token;  // Cambio aquí
+  if (!token) {
+    return res.status(401).json({ message: 'unauthorized' });
+  }
+  jwt.verify(token, JWT_SECRET, async (error, payload) => {
+    if (error) {
+      return res.status(403).json({ message: 'No authorized' });
+    }
+    req.user = await UserModel.findById(payload.id);
+    next();
+  });
+}
 
 export const authPolicies = (roles) => (req, res,  next) => {
   if (roles.includes('student')) {

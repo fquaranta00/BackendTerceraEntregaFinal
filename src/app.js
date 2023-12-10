@@ -13,6 +13,8 @@ import indexRouter from './routers/index.router.js';
 import { init as initPassoport } from './config/passport.config.js';
 import { __dirname } from './utils.js';
 
+import cors from 'cors';
+
 const app = express();
 
 const COOKIE_SECRET = 'qBvPkU2X;J1,51Z!~2p[JW.DT|g:4l@';
@@ -30,6 +32,13 @@ app.set('view engine', 'handlebars');
 
 initPassoport();
 app.use(passport.initialize());
+
+const corsOptions = {
+  origin: 'http://localhost:3000', // Reemplaza con el origen correcto de tu aplicación frontend
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
 
 app.use('/', indexRouter);
 app.use('/api', sessionsRouter, productsRouterMD, cartsRouterMD);

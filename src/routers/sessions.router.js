@@ -31,7 +31,7 @@ router.post('/sessions/register', async (req, res) => {
     const token = tokenGenerator(newUser);
 
     // Establecer la cookie con el token
-    res.cookie('access_token', token, { maxAge: 1000 * 60 * 30, httpOnly: true, signed: true });
+    // res.cookie('access_token', token, { maxAge: 1000 * 60 * 30, httpOnly: true, signed: true });
 
     res.redirect('/login');
   } catch (error) {
@@ -59,7 +59,7 @@ router.post('/sessions/login', async (req, res) => {
 
     // Verificar la contraseña
     const isValidPassword = verifyPassword(password, user);
-    console.log('Contraseña válida:', isValidPassword);
+    // console.log('Contraseña válida:', isValidPassword);
     if (!isValidPassword) {
       return res.status(401).json({ message: 'Correo o contraseña inválidos 😨' });
     }
@@ -83,25 +83,17 @@ router.post('/sessions/login', async (req, res) => {
 // Cierre de sesión
 router.get('/sessions/logout', async (req, res) => {
   try {
-    // Destruir la sesión y eliminar la cookie
-    await new Promise((resolve, reject) => {
-      req.session.destroy((error) => {
-        if (error) {
-          reject(error);
-        } else {
-          resolve();
-        }
-      });
-    });
-
+    // Limpiar la cookie que contiene el token
     res.clearCookie('access_token');
+
+    // Redirigir a la página de inicio de sesión
     res.redirect('/login');
   } catch (error) {
+    console.error('Error interno del servidor:', error);
     res.status(500).json({ message: 'Error interno del servidor' });
   }
 });
 
 
-// Resto del código para GitHub Auth, etc.
 
 export default router;
