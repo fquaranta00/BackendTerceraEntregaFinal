@@ -1,6 +1,6 @@
 
 import { Router } from 'express';
-import { createHash, verifyPassword, tokenGenerator, verifyToken } from '../utils.js';
+import { createHash, verifyPassword, tokenGenerator, verifyToken, jwtAuth } from '../utils.js';
 import passport from 'passport';
 import UserModel from '../models/user.model.js';
 
@@ -79,6 +79,13 @@ router.post('/sessions/login', async (req, res) => {
     res.status(500).json({ message: 'Error interno del servidor' });
   }
 });
+
+router.get('/sessions/current', jwtAuth, (req, res) => {
+  const token = req.signedCookies.access_token;
+  // console.log('Token from cookie:', token);
+  res.status(200).json(req.user);
+});
+
 
 // Cierre de sesión
 router.get('/sessions/logout', async (req, res) => {

@@ -2,6 +2,8 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
+import UserModel from '../src/models/user.model.js';
+
 
 // console.log('Librería jsonwebtoken importada correctamente:', jwt);
 
@@ -59,19 +61,20 @@ export const verifyToken = (token) => {
   });
 }
 
-export const jwtAuth = (req, res, next) => {
-  const token = req.signedCookies.access_token;  // Cambio aquí
-  if (!token) {
-    return res.status(401).json({ message: 'unauthorized' });
-  }
-  jwt.verify(token, JWT_SECRET, async (error, payload) => {
-    if (error) {
-      return res.status(403).json({ message: 'No authorized' });
-    }
+export const jwtAuth = async (req, res, next) => {
+  const token = req.signedCookies.access_token;
+
+  try {
+    const payload = jwt.verify(token, JWT_SECRET); // Reemplaza 'your-secret-key' con tu clave secreta
+
+    // Agregar información del usuario al objeto req
     req.user = await UserModel.findById(payload.id);
+
     next();
-  });
-}
+  } catch (error) {
+    res.status(401).json({ message: 'Token inválido' });
+  }
+}  
 
 export const authPolicies = (roles) => (req, res,  next) => {
   if (roles.includes('student')) {
